@@ -4,12 +4,12 @@
 if (isset($argv[1]) && strlen($argv[1])) {
     $file = $argv[1];
 } else {
-    echo 'Please specify a file !';
+    echo 'You need to specify a file for this to work..';
 }
 
 $src = imagecreatefromstring(file_get_contents($file));
 
-$width = imagesx($src);
+$width  = imagesx($src);
 $height = imagesy($src);
 
 $scale = 10;
@@ -20,7 +20,7 @@ $chars = array(
     '#'
 );
 
-$chars = array_reverse($chars);
+$chars   = array_reverse($chars);
 $c_count = count($chars);
 
 
